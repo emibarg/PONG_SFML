@@ -17,7 +17,7 @@ Engine::Engine():resolution {sf::Vector2f(800, 600)},playerBar(100), enemyBar(10
     currentFrameNumber = 0;
     enemyBar.setPongBarPosition(sf::Vector2f(resolution.x - enemyBar.getPongBar().getGlobalBounds().width - 40, 25));
     timesCollided = 0;
-    if (!shader.loadFromFile("C:/Users/emiba/Desktop/pong/assets/shaders/glow.frag", sf::Shader::Fragment)) {
+    if (!shader.loadFromFile("../../assets/shaders/glow.frag", sf::Shader::Fragment)) {
         // handle error
         std::cout<< "error loading shader" << std::endl;
     }
@@ -27,7 +27,7 @@ Engine::Engine():resolution {sf::Vector2f(800, 600)},playerBar(100), enemyBar(10
     //score
     playerScore = 0;
     enemyScoreInt = 0;
-    if (!font.loadFromFile("C:/Users/emiba/Desktop/pong/assets/fonts/RetroGaming.ttf")) {
+    if (!font.loadFromFile("../../assets/fonts/RetroGaming.ttf")) {
         // handle error
         std::cout<< "error loading font" << std::endl;
     }
